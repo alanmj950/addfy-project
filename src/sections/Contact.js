@@ -27,6 +27,15 @@ const Section = styled.section`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width: 40em) {
+    width:80vw;
+    font-size: ${(props) => props.theme.fontxxl};
+    position: absolute;
+  top: -.5rem;
+  left: 5%;
+  z-index: 11;
+  }
 `;
 
 const Left = styled.div`
@@ -40,6 +49,11 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+ 
+ 
+  @media (max-width: 40em) {
+   width:80vw;
+ }
 
 `;
 
@@ -51,10 +65,13 @@ const Right = styled.div`
   min-height: 100vh;
 
   background-color: ${(props) => props.theme.grey};
-  // width:65%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 40em) {
+   display:none;
+}
 
   h1 {
     width: 5rem;

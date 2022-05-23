@@ -11,9 +11,20 @@
   box-shadow: 10px 10px 15px 0 grey;
   transition: 0.3s;
   border-radius: 18px;
-  height:500px;
+  height:550px;
   background-color: #afd5eb;
   transition: 0.5s ease;
+
+}
+@media screen and (max-width: 40em) {
+
+  img{
+    height: 60%;
+  }
+  .card4
+  {
+    margin-top:-7rem;
+  }
 }
 
 

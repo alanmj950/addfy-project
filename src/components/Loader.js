@@ -59,7 +59,7 @@ const textVariants = {
         opacity: 1,
         
         transition:{
-            duration: .8,
+            duration: 1.5,
             yoyo: Infinity,
             ease:'easeInOut'
         }
@@ -78,8 +78,8 @@ const pathVariants = {
         pathLength: 1,
 
         transition:{
-            duration: 5,
-            ease:'easeInOut'
+            duration: 3,
+            ease:'easeIn'
         }
     }
 }
@@ -95,7 +95,7 @@ const Loader = () => {
               y: '100%', opacity: 0
           }}
           transition={{
-              duration: 5
+              duration: 2,
               
          }}
       >

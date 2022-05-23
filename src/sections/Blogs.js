@@ -24,6 +24,37 @@ const Overlay = styled.div`
   box-shadow: 0 0 0 4vw ${(props) => props.theme.text};
   border: 3px solid ${(props) => props.theme.bodyBlack};
   z-index: 11;
+
+  @media (max-width:70em) {
+    width:40vw;
+    height:80vh;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  }
+
+  @media (max-width:64em) {
+    width:50vw;
+    box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  }
+
+  @media (max-width:48em) {
+    width:60vw;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  }
+
+  @media (max-width:30em) {
+    width:80vw;
+    height:60vh;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  }
 `;
 
 const Title = styled.h1`
@@ -36,6 +67,15 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width:64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+
+  @media (max-width:48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+
 `;
 
 const Block = styled.div`
@@ -45,6 +85,10 @@ const Block = styled.div`
   top: 30;
   left:0;
   z-index: 0;
+
+  @media (max-width:48em) {
+    display:none;
+  }
 `;
 
 const Container = styled.div`
@@ -59,6 +103,25 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width:64em) {
+    width: 30vw;
+    position: absolute;
+  top: 30%;
+  left: 50%;
+  }
+  @media (max-width:48em) {
+    width: 40vw;
+    position: absolute;
+  top: 30%;
+  left: 50%;
+  }
+  @media (max-width:30em) {
+    width: 60vw;
+    position: absolute;
+  top: 30%;
+  left: 50%;
+  }
 `;
 const Item = styled.div`
   display: flex;
@@ -70,6 +133,10 @@ const Item = styled.div`
   z-index: 11;
   width: 95%;
   height: 30%;
+  @media (max-width:48em) {
+    width: 99%;
+    margin: 1.5rem 0;
+  }
 
   h1 {
     display: inline-block;
@@ -86,6 +153,11 @@ const Item = styled.div`
     font-size: ${(props) => props.theme.fontlg};
     cursor: pointer;
     text-align: center;
+
+    
+  @media (max-width:48em) {
+    font-size: ${(props) => props.theme.fontmd};
+  }
   }
   a {
     cursor: pointer;
@@ -255,7 +327,7 @@ const Blogs = () => {
           </a>
         </Item>
       </Container>
-      <Block data-scroll data-scroll-speed="-4">block</Block>
+      <Block data-scroll data-scroll-speed="-4"></Block>
     </Section>
   );
 };

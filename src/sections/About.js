@@ -33,6 +33,15 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 11;
+
+  @media (max-width: 64em) {
+
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const Left = styled.div`
@@ -55,6 +64,29 @@ const Left = styled.div`
     width: 80%;
     margin: 0 auto;
   }
+
+  @media (max-width: 64em) {
+    
+    p {
+      font-size: ${(props) => props.theme.fontmd};
+    }
+  }
+
+  @media (max-width: 48em) {
+
+    width:40%;
+
+    p {
+      font-size: ${(props) => props.theme.fontsm};
+      margin-top:6rem;
+    }
+  }
+
+  @media (max-width: 30em) {
+    p {
+      font-size: ${(props) => props.theme.fontxs};
+    }
+  }
 `;
 
 const Right = styled.div`
@@ -64,7 +96,6 @@ const Right = styled.div`
   min-height: 100vh;
 
   background-color: ${(props) => props.theme.grey};
-  // width:65%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -101,6 +132,10 @@ const Item = styled(motion.div)`
     font-weight: 400;
     cursor: pointer;
     text-align: center;
+  }
+
+  @media (max-width: 48em) {
+    width: 15rem; 
   }
 `;
 
@@ -173,7 +208,7 @@ const About = () => {
   return (
 
     <Section ref={ref}>
-      <Title data-scroll data-scroll-speed="-1.5">
+      <Title data-scroll data-scroll-speed="-1.5" className="heading">
         ABOUT US
       </Title>
       <Left>
